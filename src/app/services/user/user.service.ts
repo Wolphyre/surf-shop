@@ -21,6 +21,7 @@ export class UserService {
 
         if(users[0].password === password){
           this.user = users[0]
+          
           this.router.navigate(['/user'])
         }else{
           alert('user name o password non corretti')
@@ -44,5 +45,9 @@ export class UserService {
     })
     this.router.navigate(['/login']);
   }
+
+getprovince(){
+  this.http.get('./province-italia.json')
+}
 
 }

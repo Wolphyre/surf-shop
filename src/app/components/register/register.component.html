@@ -45,7 +45,16 @@
 
 
   <label for="city">city: </label>
-  <input id="city" type="text" formControlName="city">
+  <!-- <input id="city" type="text" formControlName="city"> -->
+  <div >
+    <mat-form-field appearance="outline" style="background-color: rgba(0, 0, 0, 0.422);">
+      <mat-label>Select me</mat-label>
+      <mat-select>
+        <mat-option value="cap">CAP</mat-option>
+      </mat-select>
+      <mat-hint align="end">seleziona il tuo CAP</mat-hint>
+    </mat-form-field>
+</div>
   <div
     *ngIf="!registerForm.get('city')!.valid && (registerForm.get('city')!.touched || registerForm.get('city')!.dirty)">
     <span>città obbligatoria</span>
